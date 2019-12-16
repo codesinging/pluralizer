@@ -8,6 +8,11 @@ namespace CodeSinging\Pluralizer;
 
 use Doctrine\Common\Inflector\Inflector;
 
+/**
+ * Class Pluralizer
+ * @package   CodeSinging\Pluralizer
+ * @copyright https://github.com/illuminate/support
+ */
 class Pluralizer
 {
     /**
@@ -64,13 +69,14 @@ class Pluralizer
     /**
      * Get the plural form of an English word.
      *
-     * @param  string  $value
-     * @param  int     $count
+     * @param string $value
+     * @param int    $count
+     *
      * @return string
      */
     public static function plural($value, $count = 2)
     {
-        if ((int) abs($count) === 1 || static::uncountable($value)) {
+        if ((int)abs($count) === 1 || static::uncountable($value)) {
             return $value;
         }
 
@@ -82,8 +88,9 @@ class Pluralizer
     /**
      * Pluralize the last word of an English, studly caps case string.
      *
-     * @param  string  $value
-     * @param  int     $count
+     * @param string $value
+     * @param int    $count
+     *
      * @return string
      */
     public static function pluralStudly($value, $count = 2)
@@ -92,13 +99,14 @@ class Pluralizer
 
         $lastWord = array_pop($parts);
 
-        return implode('', $parts).self::plural($lastWord, $count);
+        return implode('', $parts) . self::plural($lastWord, $count);
     }
 
     /**
      * Get the singular form of an English word.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return string
      */
     public static function singular($value)
@@ -111,7 +119,8 @@ class Pluralizer
     /**
      * Determine if the given value is uncountable.
      *
-     * @param  string  $value
+     * @param string $value
+     *
      * @return bool
      */
     protected static function uncountable($value)
@@ -122,8 +131,9 @@ class Pluralizer
     /**
      * Attempt to match the case on two strings.
      *
-     * @param  string  $value
-     * @param  string  $comparison
+     * @param string $value
+     * @param string $comparison
+     *
      * @return string
      */
     protected static function matchCase($value, $comparison)
