@@ -1,6 +1,6 @@
-<h1 align="center"> pluralizer </h1>
+# Pluralizer
 
-<p align="center"> A helper to pluralize or singularize English words..</p>
+A helper to pluralize or singularize English words.
 
 
 ## Installing
@@ -11,7 +11,9 @@ $ composer require codesinging/pluralizer -vvv
 
 ## Usage
 
-TODO
+- `Pluralizer::plural`
+- `Pluralizer::pluralStudly`
+- `Pluralizer::singular`
 
 ## Contributing
 
