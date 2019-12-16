@@ -1,0 +1,19 @@
+{
+    "name": "codesinging/pluralizer",
+    "description": "A helper to pluralize or singularize English words.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "codesinging",
+            "email": "codesinging@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeSinging\\Pluralizer\\": "src"
+        }
+    }
+}
